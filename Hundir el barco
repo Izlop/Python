@@ -1,0 +1,31 @@
+import random
+
+tablero = []#Lista vacía
+
+for x in range(0,5):
+  tablero.append(["O"] * 5)#Creamos Tablero
+
+def print_tablero(tablero):
+  for fila in tablero:
+    print " ".join(fila)
+
+print_tablero(tablero)
+
+def fila_aleatoria(tablero):
+  return random.randint(0,len(tablero)-1)
+
+def columna_aleatoria(tablero):
+	return random.randint(0,len(tablero[0])-1)
+
+barco_fila = fila_aleatoria(tablero)
+barco_columna = columna_aleatoria(tablero)
+adivina_fila = input("Adivina fila:")
+adivina_columna = input("Adivina columna:")
+#Lo escrito hace que puedas responder
+print barco_fila
+print barco_columna
+
+if adivina_fila==barco_fila and adivina_columna==barco_columna:
+    print "Felicitaciones, Hundiste mi barco!" #Dice esto al acertar al barco
+else:
+    print "Agua, no tocaste mi barco"#Dice esto si no toca el barco
