@@ -1,0 +1,8 @@
+cosa = "huevos!"
+
+for c in cosa:
+    print c
+
+palabra = "huevos!"
+
+# Acá va tu código
