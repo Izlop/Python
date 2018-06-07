@@ -1,0 +1,4 @@
+pasatiempos = []
+for i in range(3):
+    i= raw_input("Name your hobby:")
+    pasatiempos.append(i)
